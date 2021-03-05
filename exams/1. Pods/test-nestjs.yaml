@@ -10,7 +10,7 @@ spec:
     image: tranphuquy19/nestjs-jenkins:latest
     resources:
       limits:
-        memory: "150M"
-        cpu: "100m"
+        memory: "300M"
+        cpu: "200m"
     ports:
       - containerPort: 3000
