@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: nest-app
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: nestjs
+  template:
+    metadata:
+      labels:
+        app: nestjs
+      name: helloworld-app
+    spec:
+      containers:
+      - name: c1
+        image: tranphuquy19/nestjs-jenkins:latest
+        resources:
+          limits:
+            memory: "300M"
+            cpu: "200m"
+        ports:
+          - containerPort: 3000

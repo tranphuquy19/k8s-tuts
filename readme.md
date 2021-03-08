@@ -14,7 +14,10 @@
 
 ## Init master-node
 
-`kubeadm init --apiserver-advertise-address 172.16.10.100 --pod-network-cidr=10.244.0.0/16`
+```shell
+kubeadm init --apiserver-advertise-address 172.16.10.100 --pod-network-cidr=192.168.0.0/16
+kubectl apply -f https://docs.projectcalico.org/v3.10/manifests/calico.yaml
+```
 
 ## Làm việc với cluster
 
