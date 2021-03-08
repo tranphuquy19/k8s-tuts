@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nest-deploy
+spec:
+  selector:
+    matchLabels:
+      app: deployapp
+  template:
+    metadata:
+      labels:
+        app: deployapp
+    spec:
+      containers:
+      - name: nest
+        image: tranphuquy19/nestjs-jenkins:latest
+        resources:
+          limits:
+            memory: "300Mi"
+            cpu: "100m"
+        ports:
+        - containerPort: 3000
