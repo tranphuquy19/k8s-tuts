@@ -3,6 +3,7 @@ kind: Deployment
 metadata:
   name: nest-deploy
 spec:
+  replicas: 3
   selector:
     matchLabels:
       app: deployapp
