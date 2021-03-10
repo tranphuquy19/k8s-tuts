@@ -32,7 +32,7 @@ kind: Pod
 metadata:
   labels:
     app: server-app
-  name: httpd-app
+  name: httpd-pod
 spec:
   containers:
     - name: httpd-app
