@@ -2,7 +2,7 @@
 # vi: set ft=ruby :
 
 Vagrant.configure("2") do |config|
-    config.vm.box = "tranphuquy19/centos7"
+    config.vm.box = "tranphuquy19/centos7-k8s"
     config.vm.box_version = "1.0.0"
     config.vm.network "private_network", ip: "172.16.10.106"
     config.vm.hostname = "worker5.dora"
